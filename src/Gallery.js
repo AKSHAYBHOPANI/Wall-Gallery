@@ -36,7 +36,7 @@ function RenderImages(photosArray) {
 async function getPhotos() {
   // async await function to fetch images from Mocky API
   try {
-    const response = await fetch('http://www.mocky.io/v2/5ecb5c353000008f00ddd5a0');
+    const response = await fetch('https://www.mocky.io/v2/5ecb5c353000008f00ddd5a0');
     const photosArray = await response.json();
     // Pass the photosArray to Render Function
     RenderImages(photosArray);
@@ -49,7 +49,7 @@ getPhotos()
   return (
     <>
     <h1>Wall Gallery</h1>
-    <p>Hover on a Image <i class="fas fa-mouse-pointer"></i> to Read Description and Click To Expand <i class="fas fa-expand"></i></p>
+    <p>Hover on a Image <i className="fas fa-mouse-pointer"></i> to Read Description and Click To Expand <i className="fas fa-expand"></i></p>
     <div className="gallery" id="gallery">
     <div className="loader">
      <Loader
